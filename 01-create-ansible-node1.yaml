@@ -1,4 +1,4 @@
-- name: Creating ec2 Node 1 ansible Server instance # The command used to run this code  ansible-playbook -i inventory.ini 01-create-ansible-node1.yaml
+- name: Creating ec2 Node 1 ansible Server # The command used to run this code  ansible-playbook -i inventory.ini 01-create-ansible-node1.yaml
   connection: local
   hosts: local
   vars:
@@ -17,7 +17,7 @@
     loop:
     - boto3
     - botocore
-  - name: create ec2 node1 instance 
+  - name: create ec2 node1  
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       image_id: "{{ ami_id }}"
