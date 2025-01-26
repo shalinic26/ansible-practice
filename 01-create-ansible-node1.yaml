@@ -1,4 +1,4 @@
-- name: creating node1 server 
+- name: create new  
   connection: local
   hosts: local
   vars:
@@ -17,7 +17,7 @@
     loop:
     - boto3
     - botocore
-  - name: create ec2 node1  
+  - name: create node 
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       image_id: "{{ ami_id }}"
