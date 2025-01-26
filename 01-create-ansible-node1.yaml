@@ -25,6 +25,8 @@
       subnet_id: "{{ subnet_id }}"
       securitygroup_id: "{{ sg_id }}"
     loop: "{{ instances }}""
+
+    # Till here command used to run above code: ansible-playbook -i inventory.ini 01-create-ansible-node1.yaml
     
 
   
