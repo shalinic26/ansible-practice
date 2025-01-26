@@ -1,4 +1,4 @@
-- name: Creating ec2 Node 1 ansible Server 
+- name: creating node1 server 
   connection: local
   hosts: local
   vars:
