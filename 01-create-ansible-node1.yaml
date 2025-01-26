@@ -25,5 +25,4 @@
       subnet_id: "{{ subnet_id }}"
       securitygroup_id: "{{ sg_id }}" 
     loop: "{{ instances }}" 
-      
   
