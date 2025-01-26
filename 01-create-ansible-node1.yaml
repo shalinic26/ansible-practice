@@ -8,8 +8,8 @@
     #since we already installed ansible server from there we got the subnet id otherwise how to know this ???
     sg_id: sg-049e25976fa9ed337 
     instances:
-    - node1-ansible
-    - node2-ansible
+    - ansiblenode1
+    - ansiblenode2
   tasks:
   - name: Install python libraries for connecting to aws
     ansible.builtin.pip:
