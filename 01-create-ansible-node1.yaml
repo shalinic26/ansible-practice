@@ -1,4 +1,4 @@
-- name: create new  
+- name: as   
   connection: local
   hosts: local
   vars:
@@ -7,7 +7,7 @@
     subnet_id: subnet-3c9a101d # i still did not understand how we will get subnet id without installing the server, 
     #since we already installed ansible server from there we got the subnet id otherwise how to know this ???
     sg_id: sg-049e25976fa9ed337 
-  instance:
+  instances:
   - node1-ansible
   - node2-ansible
   tasks:
@@ -25,4 +25,4 @@
       instance_type: "{{ instance_type }}"
       subnet_id: "{{ subnet_id }}"
       securitygroup_id: "{{ sg_id }}" 
-    loop: "{{ instance }}"   
+    loop: "{{ instances }}"   
